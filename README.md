@@ -1,6 +1,6 @@
 # NurdCollab
 
-[![GitHub Stars](https://img.shields.io/github/stars/AJOO7/nurdcollab.svg)](https://github.com/AJOO7/nurdcollab/stargazers) [![GitHub Issues](https://img.shields.io/github/issues/AJOO7/nurdcollab.svg)](https://github.com/AJOO7/nurdcollab/issues) [![Live Site](https://img.shields.io/badge/demo-online-green.svg)](https://nurdcollab.herokuapp.com)
+[![GitHub Stars](https://img.shields.io/github/stars/AJOO7/nurdcollab.svg)](https://github.com/akumar33951/nurdcollab/stargazers) [![GitHub Issues](https://img.shields.io/github/issues/AJOO7/nurdcollab.svg)](https://github.com/akumar33951/nurdcollab/issues) [![Live Site](https://img.shields.io/badge/demo-online-green.svg)](https://nurdcollab.herokuapp.com)
 
 NurdCollab lets nerds create cloud room where they can can collaborate with other nerds and work on any project with real time editor and real time communication.
 
