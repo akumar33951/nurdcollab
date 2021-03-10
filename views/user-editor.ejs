@@ -1,0 +1,563 @@
+<!-- editor stylesheet -->
+<link rel="stylesheet" href="/css/user-editor.css" />
+<!-- required codemirror scripts -->
+<script src="/cm/lib/codemirror.js"></script>
+<link rel="stylesheet" href="/cm/lib/codemirror.css" />
+<!-- adding languages for codemirro -->
+<script src="/cm/mode/javascript/javascript.js"></script>
+<script src="/cm/mode/cmake/cmake.js"></script>
+<script src="/cm/mode/apl/apl.js"></script>
+<script src="/cm/mode/asciiarmor/asciiarmor.js"></script>
+<script src="/cm/mode/asn.1/asn.1.js"></script>
+<script src="/cm/mode/asterisk/asterisk.js"></script>
+<script src="/cm/mode/brainfuck/brainfuck.js"></script>
+<script src="/cm/mode/clike/clike.js"></script>
+<script src="/cm/mode/clojure/clojure.js"></script>
+<script src="/cm/mode/cmake/cmake.js"></script>
+<script src="/cm/mode/cobol/cobol.js"></script>
+<script src="/cm/mode/coffeescript/coffeescript.js"></script>
+<script src="/cm/mode/commonlisp/commonlisp.js"></script>
+<script src="/cm/mode/crystal/crystal.js"></script>
+<script src="/cm/mode/css/css.js"></script>
+<script src="/cm/mode/cypher/cypher.js"></script>
+<script src="/cm/mode/d/d.js"></script>
+<script src="/cm/mode/dart/dart.js"></script>
+<script src="/cm/mode/diff/diff.js"></script>
+<script src="/cm/mode/django/django.js"></script>
+<script src="/cm/mode/dockerfile/dockerfile.js"></script>
+<script src="/cm/mode/dtd/dtd.js"></script>
+<script src="/cm/mode/dylan/dylan.js"></script>
+<script src="/cm/mode/ebnf/ebnf.js"></script>
+<script src="/cm/mode/ecl/ecl.js"></script>
+<script src="/cm/mode/eiffel/eiffel.js"></script>
+<script src="/cm/mode/elm/elm.js"></script>
+<script src="/cm/mode/erlang/erlang.js"></script>
+<script src="/cm/mode/factor/factor.js"></script>
+<script src="/cm/mode/fcl/fcl.js"></script>
+<script src="/cm/mode/forth/forth.js"></script>
+<script src="/cm/mode/fortran/fortran.js"></script>
+<script src="/cm/mode/gas/gas.js"></script>
+<script src="/cm/mode/gfm/gfm.js"></script>
+<script src="/cm/mode/gherkin/gherkin.js"></script>
+<script src="/cm/mode/go/go.js"></script>
+<script src="/cm/mode/groovy/groovy.js"></script>
+<script src="/cm/mode/haml/haml.js"></script>
+<script src="/cm/mode/handlebars/handlebars.js"></script>
+<script src="/cm/mode/haskell-literate/haskell-literate.js"></script>
+<script src="/cm/mode/haskell/haskell.js"></script>
+<script src="/cm/mode/haxe/haxe.js"></script>
+<script src="/cm/mode/htmlembedded/htmlembedded.js"></script>
+<script src="/cm/mode/htmlmixed/htmlmixed.js"></script>
+<script src="/cm/mode/http/http.js"></script>
+<script src="/cm/mode/idl/idl.js"></script>
+<script src="/cm/mode/javascript/javascript.js"></script>
+<script src="/cm/mode/jinja2/jinja2.js"></script>
+<script src="/cm/mode/jsx/jsx.js"></script>
+<script src="/cm/mode/julia/julia.js"></script>
+<script src="/cm/mode/livescript/livescript.js"></script>
+<script src="/cm/mode/lua/lua.js"></script>
+<script src="/cm/mode/markdown/markdown.js"></script>
+<script src="/cm/mode/mathematica/mathematica.js"></script>
+<script src="/cm/mode/mbox/mbox.js"></script>
+<script src="/cm/mode/mirc/mirc.js"></script>
+<script src="/cm/mode/mllike/mllike.js"></script>
+<script src="/cm/mode/modelica/modelica.js"></script>
+<script src="/cm/mode/modelica/modelica.js"></script>
+<script src="/cm/mode/mscgen/mscgen.js"></script>
+<script src="/cm/mode/mumps/mumps.js"></script>
+<script src="/cm/mode/nginx/nginx.js"></script>
+<script src="/cm/mode/nsis/nsis.js"></script>
+<script src="/cm/mode/ntriples/ntriples.js"></script>
+<script src="/cm/mode/octave/octave.js"></script>
+<script src="/cm/mode/oz/oz.js"></script>
+<script src="/cm/mode/pascal/pascal.js"></script>
+<script src="/cm/mode/pegjs/pegjs.js"></script>
+<script src="/cm/mode/perl/perl.js"></script>
+<script src="/cm/mode/php/php.js"></script>
+<script src="/cm/mode/pig/pig.js"></script>
+<script src="/cm/mode/powershell/powershell.js"></script>
+<script src="/cm/mode/properties/properties.js"></script>
+<script src="/cm/mode/protobuf/protobuf.js"></script>
+<script src="/cm/mode/pug/pug.js"></script>
+<script src="/cm/mode/puppet/puppet.js"></script>
+<script src="/cm/mode/python/python.js"></script>
+<script src="/cm/mode/q/q.js"></script>
+<script src="/cm/mode/r/r.js"></script>
+<script src="/cm/mode/rpm/rpm.js"></script>
+<script src="/cm/mode/rst/rst.js"></script>
+<script src="/cm/mode/ruby/ruby.js"></script>
+<script src="/cm/mode/rust/rust.js"></script>
+<script src="/cm/mode/sas/sas.js"></script>
+<script src="/cm/mode/sass/sass.js"></script>
+<script src="/cm/mode/scheme/scheme.js"></script>
+<script src="/cm/mode/shell/shell.js"></script>
+<script src="/cm/mode/sieve/sieve.js"></script>
+<script src="/cm/mode/slim/slim.js"></script>
+<script src="/cm/mode/smalltalk/smalltalk.js"></script>
+<script src="/cm/mode/smarty/smarty.js"></script>
+<script src="/cm/mode/solr/solr.js"></script>
+<script src="/cm/mode/soy/soy.js"></script>
+<script src="/cm/mode/sparql/sparql.js"></script>
+<script src="/cm/mode/spreadsheet/spreadsheet.js"></script>
+<script src="/cm/mode/sql/sql.js"></script>
+<script src="/cm/mode/stex/stex.js"></script>
+<script src="/cm/mode/stylus/stylus.js"></script>
+<script src="/cm/mode/swift/swift.js"></script>
+<script src="/cm/mode/tcl/tcl.js"></script>
+<script src="/cm/mode/textile/textile.js"></script>
+<script src="/cm/mode/tiddlywiki/tiddlywiki.js"></script>
+<script src="/cm/mode/tiki/tiki.js"></script>
+<script src="/cm/mode/toml/toml.js"></script>
+<script src="/cm/mode/tornado/tornado.js"></script>
+<script src="/cm/mode/troff/troff.js"></script>
+<script src="/cm/mode/ttcn-cfg/ttcn-cfg.js"></script>
+<script src="/cm/mode/ttcn/ttcn.js"></script>
+<script src="/cm/mode/turtle/turtle.js"></script>
+<script src="/cm/mode/twig/twig.js"></script>
+<script src="/cm/mode/vb/vb.js"></script>
+<script src="/cm/mode/vbscript/vbscript.js"></script>
+<script src="/cm/mode/verilog/verilog.js"></script>
+<script src="/cm/mode/velocity/velocity.js"></script>
+<script src="/cm/mode/vhdl/vhdl.js"></script>
+<script src="/cm/mode/vue/vue.js"></script>
+<script src="/cm/mode/wast/wast.js"></script>
+<script src="/cm/mode/webidl/webidl.js"></script>
+<script src="/cm/mode/xml/xml.js"></script>
+<script src="/cm/mode/xquery/xquery.js"></script>
+<script src="/cm/mode/yacas/yacas.js"></script>
+<script src="/cm/mode/yaml-frontmatter/yaml-frontmatter.js"></script>
+<script src="/cm/mode/yaml/yaml.js"></script>
+<script src="/cm/mode/z80/z80.js"></script>
+
+<!-- adding edit section of code mirror -->
+<!-- script for adding autoclose to editor -->
+<script src="/cm/addon/edit/closetag.js"></script>
+<!-- script for adding auto close brackets to editor -->
+<script src="/cm/addon/edit/closebrackets.js"></script>
+<!-- script for adding continue list to editor -->
+<script src="/cm/addon/edit/continuelist.js"></script>
+<!-- script for identifying sorresponding brackets in editor -->
+<script src="/cm/addon/edit/matchbrackets.js"></script>
+<!-- script to identify matching tag(specially for XMLs) -->
+<script src="/cm/addon/edit/matchtags.js"></script>
+<!-- script for trailing spaces in editor -->
+<script src="/cm/addon/edit/trailingspace.js"></script>
+<!-- script implementing search functionality on editor -->
+<script src="/cm/addon/search/search.js"></script>
+<script src="/cm/addon/search/searchcursor.js"></script>
+<!-- script implementing jump to particular line functionality on editor -->
+<script src="/cm/addon/search/jump-to-line.js"></script>
+<!-- script for search dialog box in editor -->
+<script src="/cm/addon/dialog/dialog.js"></script>
+<link rel="stylesheet" href="/cm/addon/dialog/dialog.css" />
+
+<!-- adding themes for theme section -->
+<link rel="stylesheet" href="/cm/theme/dracula.css" />
+<link rel="stylesheet" href="/cm/theme/3024-day.css" />
+<link rel="stylesheet" href="/cm/theme/3024-night.css" />
+<link rel="stylesheet" href="/cm/theme/abcdef.css" />
+<link rel="stylesheet" href="/cm/theme/ambiance-mobile.css" />
+<link rel="stylesheet" href="/cm/theme/ambiance.css" />
+<link rel="stylesheet" href="/cm/theme/ayu-dark.css" />
+<link rel="stylesheet" href="/cm/theme/ayu-mirage.css" />
+<link rel="stylesheet" href="/cm/theme/base16-dark.css" />
+<link rel="stylesheet" href="/cm/theme/base16-light.css" />
+<link rel="stylesheet" href="/cm/theme/bespin.css" />
+<link rel="stylesheet" href="/cm/theme/blackboard.css" />
+<link rel="stylesheet" href="/cm/theme/cobalt.css" />
+<link rel="stylesheet" href="/cm/theme/colorforth.css" />
+<link rel="stylesheet" href="/cm/theme/darcula.css" />
+<link rel="stylesheet" href="/cm/theme/dracula.css" />
+<link rel="stylesheet" href="/cm/theme/duotone-dark.css" />
+<link rel="stylesheet" href="/cm/theme/duotone-light.css" />
+<link rel="stylesheet" href="/cm/theme/eclipse.css" />
+<link rel="stylesheet" href="/cm/theme/elegant.css" />
+<link rel="stylesheet" href="/cm/theme/erlang-dark.css" />
+<link rel="stylesheet" href="/cm/theme/gruvbox-dark.css" />
+<link rel="stylesheet" href="/cm/theme/hopscotch.css" />
+<link rel="stylesheet" href="/cm/theme/icecoder.css" />
+<link rel="stylesheet" href="/cm/theme/idea.css" />
+<link rel="stylesheet" href="/cm/theme/isotope.css" />
+<link rel="stylesheet" href="/cm/theme/lesser-dark.css" />
+<link rel="stylesheet" href="/cm/theme/liquibyte.css" />
+<link rel="stylesheet" href="/cm/theme/lucario.css" />
+<link rel="stylesheet" href="/cm/theme/material-darker.css" />
+<link rel="stylesheet" href="/cm/theme/material-ocean.css" />
+<link rel="stylesheet" href="/cm/theme/material-palenight.css" />
+<link rel="stylesheet" href="/cm/theme/material.css" />
+<link rel="stylesheet" href="/cm/theme/mbo.css" />
+<link rel="stylesheet" href="/cm/theme/mdn-like.css" />
+<link rel="stylesheet" href="/cm/theme/midnight.css" />
+<link rel="stylesheet" href="/cm/theme/monokai.css" />
+<link rel="stylesheet" href="/cm/theme/moxer.css" />
+<link rel="stylesheet" href="/cm/theme/neat.css" />
+<link rel="stylesheet" href="/cm/theme/neo.css" />
+<link rel="stylesheet" href="/cm/theme/night.css" />
+<link rel="stylesheet" href="/cm/theme/nord.css" />
+<link rel="stylesheet" href="/cm/theme/oceanic-next.css" />
+<link rel="stylesheet" href="/cm/theme/panda-syntax.css" />
+<link rel="stylesheet" href="/cm/theme/paraiso-dark.css" />
+<link rel="stylesheet" href="/cm/theme/paraiso-light.css" />
+<link rel="stylesheet" href="/cm/theme/pastel-on-dark.css" />
+<link rel="stylesheet" href="/cm/theme/railscasts.css" />
+<link rel="stylesheet" href="/cm/theme/rubyblue.css" />
+<link rel="stylesheet" href="/cm/theme/seti.css" />
+<link rel="stylesheet" href="/cm/theme/shadowfox.css" />
+<link rel="stylesheet" href="/cm/theme/solarized.css" />
+<link rel="stylesheet" href="/cm/theme/ssms.css" />
+<link rel="stylesheet" href="/cm/theme/the-matrix.css" />
+<link rel="stylesheet" href="/cm/theme/tomorrow-night-bright.css" />
+<link rel="stylesheet" href="/cm/theme/tomorrow-night-eighties.css" />
+<link rel="stylesheet" href="/cm/theme/ttcn.css" />
+<link rel="stylesheet" href="/cm/theme/twilight.css" />
+<link rel="stylesheet" href="/cm/theme/vibrant-ink.css" />
+<link rel="stylesheet" href="/cm/theme/xq-dark.css" />
+<link rel="stylesheet" href="/cm/theme/xq-light.css" />
+<link rel="stylesheet" href="/cm/theme/yeti.css" />
+<link rel="stylesheet" href="/cm/theme/yonce.css" />
+<link rel="stylesheet" href="/cm/theme/zenburn.css" />
+
+<!-- scripts for scroll bar in editor -->
+<script src="/cm/addon/scroll/simplescrollbars.js"></script>
+<script src="/cm/addon/scroll/annotatescrollbar.js"></script>
+<script src="/cm/addon/scroll/scrollpastend.js"></script>
+<link rel="stylesheet" href="/cm/addon/scroll/simplescrollbars.css" />
+
+<div class="editor-container">
+  <div class="editor-main" style="margin:25px">
+    <div
+      class="room-container"
+      style="display: flex; flex-direction: row; height: 20px"
+    >
+      <p>
+        Room ID&nbsp&nbsp:
+        <button
+          onclick="copyClipboard('#room')"
+          style="margin-bottom: 0; padding: 0"
+          title="Click to Copy Room ID"
+          class="btn"
+        >
+          <div id="room"><%= roomId %></div>
+        </button>
+      </p>
+
+      <!--    <p style="margin-bottom: 0; padding: 0">Copy</p>  -->
+    </div>
+    <br />
+    <div class="utility-container">
+      <div class="left">
+        <button id="cpy" onclick="copyToClipboard()" title="Copy Code">
+          <i class="fas fa-copy fa-2x"></i>
+        </button>
+        <!--try replacing with copy fontawesome -->
+        <button id="download" title="Download code">
+          <i class="fas fa-file-download fa-2x"></i>
+        </button>
+        <button
+          id="uploadButton"
+          title="Upload"
+          style="background-color: transparent; border: none"
+        >
+          <i class="fas fa-file-upload fa-2x"> </i>
+        </button>
+        <input id="fileInput" type="file" style="height: 0; width: 0" />
+        <button id="clr" onclick="reset()" title="Clear code">
+          <i class="fas fa-broom fa-2x"></i>
+        </button>
+        <button id="clr" onclick="findInfo()" title="Search code">
+          <i class="fas fa-search fa-2x"></i>
+        </button>
+        <button id="clr" onclick="incSize()">
+          <i class="fas fa-plus fa-2x"></i>
+        </button>
+        <button id="clr" onclick="decSize()">
+          <i class="fas fa-minus fa-2x"></i>
+        </button>
+
+        <!--        <input type="button" id="download" value="Download" />
+    <input id="fileInput" type="file" /> -->
+      </div>
+      <div class="right">
+        <select onchange="selectTheme()" id="selectTheme">
+          <option selected disabled>Theme</option>
+          <option>3024-day</option>
+          <option>3024-night</option>
+          <option>abcdef</option>
+          <option>ambiance</option>
+          <option>ayu-dark</option>
+          <option>ayu-mirage</option>
+          <option>base16-dark</option>
+          <option>base16-light</option>
+          <option>bespin</option>
+          <option>blackboard</option>
+          <option>cobalt</option>
+          <option>colorforth</option>
+          <option>darcula</option>
+          <option>dracula</option>
+          <option>duotone-dark</option>
+          <option>duotone-light</option>
+          <option>eclipse</option>
+          <option>elegant</option>
+          <option>erlang-dark</option>
+          <option>gruvbox-dark</option>
+          <option>hopscotch</option>
+          <option>icecoder</option>
+          <option>idea</option>
+          <option>isotope</option>
+          <option>lesser-dark</option>
+          <option>liquibyte</option>
+          <option>lucario</option>
+          <option>material</option>
+          <option>material-darker</option>
+          <option>material-palenight</option>
+          <option>material-ocean</option>
+          <option>mbo</option>
+          <option>mdn-like</option>
+          <option>midnight</option>
+          <option>monokai</option>
+          <option>moxer</option>
+          <option>neat</option>
+          <option>neo</option>
+          <option>night</option>
+          <option>nord</option>
+          <option>oceanic-next</option>
+          <option>panda-syntax</option>
+          <option>paraiso-dark</option>
+          <option>paraiso-light</option>
+          <option>pastel-on-dark</option>
+          <option>railscasts</option>
+          <option>rubyblue</option>
+          <option>seti</option>
+          <option>shadowfox</option>
+          <option>solarized dark</option>
+          <option>solarized light</option>
+          <option>the-matrix</option>
+          <option>tomorrow-night-bright</option>
+          <option>tomorrow-night-eighties</option>
+          <option>ttcn</option>
+          <option>twilight</option>
+          <option>vibrant-ink</option>
+          <option>xq-dark</option>
+          <option>xq-light</option>
+          <option>yeti</option>
+          <option>yonce</option>
+          <option>zenburn</option>
+        </select>
+        <select onchange="selectLang()" id="selectLang">
+          <option selected disabled>Language</option>
+          <option>javascript</option>
+          <option>text/x-cmake</option>
+          <option>text/apl</option>
+          <option>text/x-ttcn-asn</option>
+          <option>text/x-asterisk</option>
+          <option>text/x-csrc</option>
+          <option>text/x-c++src</option>
+          <option>text/x-java</option>
+          <option>text/x-csharp</option>
+          <option>text/x-objectivec</option>
+          <option>text/x-scala</option>
+          <option>text/x-vertex</option>
+          <option>x-shader/x-fragment</option>
+          <option>text/x-squirrel</option>
+          <option>text/x-ceylon</option>
+          <option>text/x-clojure</option>
+          <option>text/x-gss</option>
+          <option>text/x-coffeescript</option>
+          <option>text/x-common-lisp</option>
+          <option>text/x-coq</option>
+          <option>text/x-crystal</option>
+          <option>text/css</option>
+          <option>text/x-scss</option>
+          <option>text/x-less</option>
+          <option>application/x-cypher-query</option>
+          <option>text/x-python</option>
+          <option>text/x-cython</option>
+          <option>text/x-d</option>
+          <option>text/x-django</option>
+          <option>text/x-dockerfile</option>
+          <option>text/x-diff</option>
+          <option>application/xml-dtd</option>
+          <option>text/x-dylan</option>
+          <option>text/x-ecl</option>
+          <option>text/x-eiffel</option>
+          <option>text/x-elm</option>
+          <option>text/x-erlang</option>
+          <option>text/x-factor</option>
+          <option>text/x-fcl</option>
+          <option>text/x-forth</option>
+          <option>text/x-fortran</option>
+          <option>text/x-ocaml</option>
+          <option>text/x-fsharp</option>
+          <option>text/x-gas</option>
+          <option>text/x-feature</option>
+          <option>text/x-go</option>
+          <option>text/x-groovy</option>
+          <option>text/x-haml</option>
+          <option>text/x-handlebars-template</option>
+          <option>text/x-literate-haskell</option>
+          <option>text/x-haxe</option>
+          <option>text/x-hxml</option>
+          <option>application/x-aspx</option>
+          <option>application/x-ejs</option>
+          <option>application/x-jsp</option>
+          <option>application/x-erb</option>
+          <option>text/html</option>
+          <option>message/http</option>
+          <option>text/x-idl</option>
+          <option>text/x-jade</option>
+          <option>application/json</option>
+          <option>application/ld+json</option>
+          <option>text/typescript</option>
+          <option>application/typescript</option>
+          <option>text/x-julia</option>
+          <option>text/x-livescript</option>
+          <option>text/x-lua</option>
+          <option>text/x-markdown</option>
+          <option>text/x-mathematica</option>
+          <option>application/mbox</option>
+          <option>text/mirc</option>
+          <option>text/x-modelica</option>
+          <option>text/x-mscgen</option>
+          <option>text/x-xu</option>
+          <option>text/x-msgenny</option>
+          <option>text/nginx</option>
+          <option>text/x-nsis</option>
+          <option>text/n-triples</option>
+          <option>text/x-ocaml</option>
+          <option>text/x-fsharp</option>
+          <option>text/x-octave</option>
+          <option>text/x-oz</option>
+          <option>text/x-pascal</option>
+          <option>text/x-perl</option>
+          <option>application/pgp</option>
+          <option>application/pgp-keys</option>
+          <option>application/pgp-signature</option>
+          <option>application/x-httpd-php</option>
+          <option>text/x-php</option>
+          <option>text/x-pig</option>
+          <option>application/x-powershell</option>
+          <option>text/x-properties</option>
+          <option>text/x-ini</option>
+          <option>text/x-protobuf</option>
+          <option>text/x-puppet</option>
+          <option>text/x-python</option>
+          <option>text/x-q</option>
+          <option>text/x-rsrc</option>
+          <option>text/x-rpm-spec</option>
+          <option>text/x-rpm-changes</option>
+          <option>text/x-rst</option>
+          <option>text/x-ruby</option>
+          <option>text/x-rustsrc</option>
+          <option>text/x-sas</option>
+          <option>text/x-sass</option>
+          <option>text/x-spreadsheet</option>
+          <option>text/x-scheme</option>
+          <option>text/x-sh</option>
+          <option>application/sieve</option>
+          <option>application/x-slim</option>
+          <option>text/x-stsrc</option>
+          <option>text/x-smarty</option>
+          <option>text/x-solr</option>
+          <option>text/x-soy</option>
+          <option>text/x-styl</option>
+          <option>text/x-sql</option>
+          <option>text/x-mysql</option>
+          <option>text/x-mariadb</option>
+          <option>text/x-cassandra</option>
+          <option>text/x-plsql</option>
+          <option>text/x-mssql</option>
+          <option>text/x-hive</option>
+          <option>text/x-pgsql</option>
+          <option>text/x-gql</option>
+          <option>application/sparql-query</option>
+          <option>text/x-swift</option>
+          <option>text/x-stex</option>
+          <option>text/x-tcl</option>
+          <option>text/x-textile</option>
+          <option>text/x-tiddlywiki</option>
+          <option>text/x-toml</option>
+          <option>text/x-tornado</option>
+          <option>troff</option>
+          <option>text/x-ttcn</option>
+          <option>text/x-ttcn3</option>
+          <option>text/x-ttcnpp</option>
+          <option>text/turtle</option>
+          <option>text/x-vb</option>
+          <option>text/vbscript</option>
+          <option>text/velocity</option>
+          <option>text/x-verilog</option>
+          <option>text/x-systemverilog</option>
+          <option>text/x-vhdl</option>
+          <option>text/x-vue</option>
+          <option>text/x-webidl</option>
+          <option>application/xml</option>
+          <option>text/html</option>
+          <option>application/xquery</option>
+          <option>text/x-yacas</option>
+          <option>text/x-yaml</option>
+          <option>text/x-z80</option>
+          <option>text/x-ez80</option>
+        </select>
+      </div>
+    </div>
+
+    <textarea id="editor"></textarea>
+    <div class="audio">
+      <label for="speed" style="color: #ffffff">Playback speed</label>
+      <input
+        type="number"
+        name="spee"
+        id="speed"
+        min=".5"
+        max="3"
+        step=".5"
+        value="1"
+      />
+      <button id="play-button" title="Play"><i class="fas fa-play"></i></button>
+      <button id="pause-button" title="Pause">
+        <i class="fas fa-pause"></i>
+      </button>
+      <button id="stop-button" title="Stop"><i class="fas fa-stop"></i></button>
+    </div>
+
+    <!--try replacing with clear font awesome symbol-->
+  </div>
+</div>
+<!-- script for web real time communication -->
+<script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js" defer></script>
+<!-- script for socket.io -->
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"
+  defer
+></script>
+<script src="/js/script.js" defer></script>
+<script>
+  // loaclising room id for use in application
+  const ROOM_ID = "<%= roomId %>";
+  // providng searching facilities to user through alert
+  function findInfo() {
+    alert(
+      "Ctrl-F / Cmd-F -> Start searching \nCtrl-G / Cmd-G -> Find next \nShift-Ctrl-G / Shift-Cmd-G -> Find previous \nShift-Ctrl-F / Cmd-Option-F -> Replace \nShift-Ctrl-R / Shift-Cmd-Option-F -> Replace all \nAlt-F -> Persistent search \nAlt-G -> Jump to line "
+    );
+  }
+  // increasing size of text in the editor
+  function incSize() {
+    curSize = parseInt($(".CodeMirror").css("font-size")) + 2;
+    if (curSize <= 32) $(".CodeMirror").css("font-size", curSize);
+  }
+  // decreasing size of text in the editor
+  function decSize() {
+    curSize = parseInt($(".CodeMirror").css("font-size")) - 2;
+    if (curSize >= 14) $(".CodeMirror").css("font-size", curSize);
+  }
+  // copying  id in form of temp space
+  function copyClipboard(element) {
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val($(element).html()).select();
+    document.execCommand("copy");
+    $temp.remove();
+    // alert("working");
+  }
+</script>
+<div id="video-grid"></div>
